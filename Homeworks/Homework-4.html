@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homework-4</title>
+    <style>
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #000;
+            transition: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Example</h2>
+
+    <form action="target_page.php" method="GET" target="_blank">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="target_page.php" method="POST" target="_self">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h2>Canvas Örnek</h2>
+    <canvas id="canvas" width="300" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 100, 100);
+    </script>
+</body>
+
+</html>
